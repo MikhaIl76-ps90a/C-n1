@@ -1,0 +1,69 @@
+using System;
+
+public class NegativeInteger
+{
+    private int _a = -1;
+    
+    public NegativeInteger(int s)
+    {
+        if (s < 0)
+        {
+        Console.WriteLine("Sozdan obekt");
+        }
+        else
+        {
+            Console.WriteLine("Error");
+        }
+    }
+    
+    public int A
+    {
+        get => _a;
+        set
+        {
+            if (value < 0)
+            {
+                _a = value;
+            }
+        }
+    }
+    
+    public int Value()
+    {
+        return _a;
+    }
+    
+    public void Copy(NegativeInteger b)
+    {
+       _a = b.A;
+    }
+    
+    public int X(NegativeInteger Integer)
+    {
+        if (Integer.A > _a)
+        {
+            return -1;
+        }
+        if (Integer.A == _a)
+        {
+            return 0;
+        }
+        else
+        {
+            return 1;
+        }
+    }
+    
+}
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        NegativeInteger b = new NegativeInteger(-3);
+        NegativeInteger c = new NegativeInteger(-3);
+        b.A = 37;
+        c.A = -7;
+        Console.WriteLine(c.Value());
+    }
+}
