@@ -1,0 +1,54 @@
+using System;
+
+class Figure
+{
+    public int Layer;
+    public string EdgeColor;
+    public decimal EdgeThickness;
+    public string FillColor;
+    public Figure(int layer, string edgeColor, decimal edgeThickness, string fillColor)
+    {
+        Layer = 0;
+        EdgeColor = "blak";
+        EdgeThickness = 1.0m;
+        FillColor = "white";
+        Layer = layer;
+        EdgeColor = edgeColor;
+        EdgeThickness = edgeThickness;
+        FillColor = fillColor;
+    }
+}
+class Point
+{
+    public decimal X_Position;
+    public decimal Y_Position;
+}
+class protected Circle : Figure
+{
+    public decimal Radius;
+    public Point Center;
+}
+class protected Edge : Figure
+{
+    public Point FirstPoint;
+    public Point SecondPoint;
+    new public string FillColor{ get; };
+    public void ShowVerticalEdges([]Edge a)
+    {
+        for(int i = 0;i < sizeof(a);i++)
+        {
+            if (X_Position.FirstPoint.a[i] == X_Position.SecondPoint.a[i])
+            {
+                Console.WriteLine($"{X_Position.FirstPoint.a[i]} {Y_Position.FirstPoint.a[i]} {X_Position.SecondPoint.a[i]} {Y_Position.SecondPoint.a[i]}")
+            }
+            
+        }
+        
+    }
+}
+
+class Polygon : Figure
+{
+    
+}
+
